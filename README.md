@@ -7,7 +7,7 @@ Right way to play (gamble) is input certain numbers and have fun
 # How to run?
 git clone ...
 
-docker run -it <your docker image>
+docker run -it ...your title of docker image...
 
 ## P.S.
 Sorry for my weakness, but dockerizing SFML app is unsolvable problem for me, i wasted too much time by doing it((
