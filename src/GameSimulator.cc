@@ -149,6 +149,7 @@ void GameSimulator::addBalance() {
 }
 
 void GameSimulator::run() {
+    std::string balvanka;
     bool running = true;
     
     while (running) {
@@ -171,8 +172,8 @@ void GameSimulator::run() {
         switch (choice) {
             case 1:
                 shop_->displayAvailableContainers();
-                std::cout << "\nPress Enter to continue...";
-                std::cin.get();
+                std::cout << "\nPress any key and Enter to continue...";
+                std::cin >> balvanka;
                 break;
             case 2:
                 openSingleCase();
@@ -182,8 +183,8 @@ void GameSimulator::run() {
                 break;
             case 4:
                 player_->displayInventory();
-                std::cout << "\nPress Enter to continue...";
-                std::cin.get();
+                std::cout << "\nPress any key and Enter to continue...";
+                std::cin >> balvanka;
                 break;
             case 5:
                 sellItem();

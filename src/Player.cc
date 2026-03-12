@@ -47,11 +47,12 @@ void Player::sellItem(int index) {
         std::cout << "Sold item for $" << price << "\n";
         inventory_.erase(inventory_.begin() + index);
     } else {
-        throw std::out_of_range("Invalid item index");
+        std::cout << "Invalid input";
     }
 }
 
 void Player::sellAllItems(){
+    std::string balvanka;
     if (!(inventory_.empty())){
         for (int i = 0; i<inventory_.size(); i++){
             double price = inventory_[i]->get_price();
@@ -59,7 +60,8 @@ void Player::sellAllItems(){
         }
         inventory_.clear();
     } else {
-        throw std::out_of_range("Inventory is empty");
+        std::cout << "invalid input\npress any key and Enter to continue...";
+        std::cin >> balvanka;
     }
 }
 
